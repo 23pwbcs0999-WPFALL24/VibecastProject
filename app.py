@@ -117,12 +117,12 @@ def _performance_html(script: str, style: str, language: str, audio_bytes: bytes
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
 *{{box-sizing:border-box}} body{{margin:0;background:#fbf8f2;font-family:Arial,sans-serif;color:#302b2a}}
-.stage{{position:relative;overflow:hidden;border:1px solid #e8dccb;border-radius:23px;background:radial-gradient(circle at 17% 18%,#fff7e9 0,#f3e6d3 40%,#e9e8db 100%);min-height:385px;padding:17px 18px 14px}}
+.stage{{position:relative;overflow:hidden;border:1px solid #e8dccb;border-radius:23px;background:radial-gradient(circle at 17% 18%,#fff7e9 0,#f3e6d3 40%,#e9e8db 100%);height:410px;min-height:0;padding:17px 18px 14px;display:flex;flex-direction:column}}
 .stage:before,.stage:after{{content:'✦';position:absolute;color:#b29a6d55;font-size:30px;animation:twinkle 3s ease-in-out infinite}}.stage:before{{top:18px;right:24px}}.stage:after{{left:34px;bottom:65px;font-size:22px;animation-delay:1.2s}}
 .topline{{display:flex;justify-content:space-between;align-items:center;gap:10px;position:relative;z-index:2}}
 .tag{{font-size:10px;font-weight:800;letter-spacing:1.5px;color:#756d47;text-transform:uppercase}}.live{{display:flex;gap:6px;align-items:center;font-size:10px;color:#756d47;font-weight:800;letter-spacing:1px;text-transform:uppercase}}.dot{{width:7px;height:7px;background:#9aa071;border-radius:50%;box-shadow:0 0 0 4px #9aa07120}}
-.bubble{{position:relative;z-index:2;margin:13px auto 0;max-width:720px;background:#fffdf9;border:1px solid #eadfce;border-radius:17px 17px 17px 5px;padding:12px 15px;color:#4a3b40;font-family:Georgia,serif;font-size:15px;line-height:1.5;box-shadow:0 8px 20px #6745500c;min-height:58px;max-height:115px;overflow-y:auto;}}
-.cast{{height:220px;display:flex;justify-content:center;align-items:flex-end;position:relative;z-index:1;margin-top:0}}
+.bubble{{position:relative;z-index:2;margin:13px auto 0;max-width:720px;background:#fffdf9;border:1px solid #eadfce;border-radius:17px 17px 17px 5px;padding:12px 15px;color:#4a3b40;font-family:Georgia,serif;font-size:15px;line-height:1.5;box-shadow:0 8px 20px #6745500c;min-height:58px;height:115px;flex:0 0 115px;overflow-y:auto;}}
+.cast{{flex:1;min-height:0;display:flex;justify-content:center;align-items:flex-end;position:relative;z-index:1;margin-top:0}}
 .host{{height:225px;width:225px;transform-origin:50% 90%;animation:idleBob 3.4s ease-in-out infinite;filter:drop-shadow(0 8px 9px #67455018)}}.host svg{{width:100%;height:100%;display:block;object-fit:contain}}
 #host-mouth{{transform-box:fill-box;transform-origin:center}}
 .stage.vibe-energetic:not(.speaking) .host{{animation:energeticIdle .8s ease-in-out infinite}}
